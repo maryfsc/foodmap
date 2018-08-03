@@ -1,28 +1,33 @@
 html {
-	height: 100vh;
+  height: 100vh;
 }
 
 body {
-	height: 100vh;
-	margin: 0;
-	font-family: 'Montserrat', sans-serif;
-	background-color: #F8F9FA;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F8F9FA;
 }
 
 .logo {
-	font-family: 'Pacifico', cursive;
-	font-size: 60px;
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
 }
 
 .logo-size {
-	font-size: 35px;
+  font-size: 35px;
 }
 
 .shop {
-	font-size: 25px;	
+  font-size: 25px;	
 }
 
 #map-wrapper {
-	height: 70vh;
-	width: 89vw;
+  height: 70vh;
+  width: 89vw;
+}
+
+#pics-wrapper img {
+  height: 100px;
+  margin: 5px;
 }

@@ -16,11 +16,16 @@ $(document).ready(function () {
 
   initMap();
 
-  $.getJSON('data.js', function(obj) {
-    $.each(obj, function(src) {
-      $('#pics-wrapper').append('<img src=' + image +'>');
-    });
+  restaurantes.forEach(restaurante => {
+    $("#pics-wrapper").append('<img src=' + restaurante.image + ' class="">');
   });
+
+  // debugger
+  // $.getJSON('data.js', function(restaurantes) {
+  //   $.each(restaurantes, function(src) {
+  //     $('#pics-wrapper').append('<img src=' + restaurantes[image] + '>');
+  //   });
+  // });
 
 //   $.getJSON('data.js', function(image) {
 //   var restaurantPics = [];
