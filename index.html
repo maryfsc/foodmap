@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://file.myfontastic.com/VkDsUaoCzJ7rFCAmHgVQce/icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico" rel="stylesheet"> 
-    <title>Foodmap</title>
+    <title>Foodmap | Mapeie sua fome!</title>
   </head>
   <body>
     <!-- div wrapper página com logo -->
     <div class="container-fluid bg-danger h-100" id="logo-page"> 
-      <div class="row">
+      <div class="row h-100 align-items-center">
         <div class="col-sm-12">
           <h1 class="text-white text-center logo">Foodmap</h1>
         </div>
@@ -22,7 +22,7 @@
     </div> 
     <!-- termina div wrapper página com logo -->
     <!-- div wrapper de todo o conteúdo -->
-    <div class="container-fluid d-none" id="initial-page">
+    <div class="container-fluid" id="initial-page">
       <nav class="navbar navbar-expand-sm navbar-light bg-light w-100 justify-content-around show-up">
         <a class="navbar-brand text-danger logo logo-size" href="#">Foodmap</a>
         <form class="form-inline">
@@ -36,29 +36,34 @@
         </form>
       </nav>
     <!-- map container -->
-    <div class="container-fluid bg-light show-up">
-      <div class="row">
+    <div class="container-fluid bg-light">
+      <div class="row justify-content-center">
         <div class="col-sm-12">
-          <div class="map-wrapper" style="height: 300px">
-            <p>map goes here</p>
+          <div class="" id="map-wrapper">
           </div>
         </div>
       </div>
     </div>
     <!-- end map container -->
-    <div class="container-fluid show-up">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12 text-center">
+        <div class="col-sm-12 text-center mt-4 font-weight-bold">
           <p>Encontre seu tipo favorito de comida perto de você!</p>
         </div>
       </div>
+      <!-- pics container -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="h-100" id="pics-wrapper">
+            <p>pics go here</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   <!-- termina div wrapper com todo o conteúdo -->
-
-    <!-- O script comentado é o do Google maps -->
-    <!-- <script async defer  src="https://maps.googleapis.com/maps/api/js?key=<sua-chave-da-API>&callback=<sua-funcao-de-inicio>">
-    </script> -->  
+  </div>
+    <script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5FLJhv_TZTrmtGe8KlJZXdRHULjrT6g&callback=initMap">
+    </script>  
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
