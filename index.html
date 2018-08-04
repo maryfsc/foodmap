@@ -52,10 +52,8 @@
         <a class="navbar-brand text-danger logo logo-size" href="#">Foodmap</a>
         <form class="form-inline">
           <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"><i class="icon-search"></i></span>
-            </div>
             <input class="form-control" id="user-input" type="search" aria-label="Search">
+            <button type="button" class="btn btn-danger" id="filter-button"><i class="icon-search"></i></button>
             <i class="icon-basket text-danger ml-3 shop"></i>
           </div>
         </form>
@@ -73,7 +71,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12 text-center mt-4 font-weight-bold">
-          <p>Encontre seu tipo favorito de comida perto de você!</p>
+          <p id="message">Encontre seu tipo favorito de comida perto de você!</p>
+          <p id="error-message">Não mapeamos o que procura! :( Que tal outras opções deliciosas?</p>
         </div>
       </div>
       <!-- pics container -->
