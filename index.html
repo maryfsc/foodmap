@@ -12,12 +12,10 @@
     <title>Foodmap | Mapeie sua fome!</title>
   </head>
   <body>
-    <!-- modal início -->
     <div class="modal fade" id="only-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <!-- recebe nome do restaurante -->
             <div id="modal-restname">
               <p>NOME</p>
             </div>
@@ -26,7 +24,6 @@
             </button>
           </div>
           <div class="modal-body d-flex" id="modal-body">
-          <!-- recebe imagem e descrição do restaurante -->
           <p>Foto e descrição</p>
           </div>
           <div class="modal-footer">
@@ -35,8 +32,6 @@
         </div>
       </div>
     </div>
-    <!-- modal end -->
-    <!-- div wrapper página com logo -->
     <div class="container-fluid bg-danger h-100" id="logo-page"> 
       <div class="row h-100 align-items-center">
         <div class="col-sm-12">
@@ -45,8 +40,6 @@
         </div>
       </div>
     </div> 
-    <!-- termina div wrapper página com logo -->
-    <!-- div wrapper de todo o conteúdo -->
     <div class="container-fluid" id="initial-page">
       <nav class="navbar navbar-expand-sm navbar-light bg-light w-100 justify-content-around show-up">
         <a class="navbar-brand text-danger logo logo-size" href="#">Foodmap</a>
@@ -58,7 +51,6 @@
           </div>
         </form>
       </nav>
-    <!-- map container -->
     <div class="container-fluid bg-light">
       <div class="row justify-content-center">
         <div class="col-sm-12">
@@ -67,23 +59,20 @@
         </div>
       </div>
     </div>
-    <!-- end map container -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12 text-center mt-4 font-weight-bold">
-          <p id="message">Encontre seu tipo favorito de comida perto de você!</p>
-          <p id="error-message">Não mapeamos o que procura! :( Que tal outras opções deliciosas?</p>
+          <p id="message">Encontre seu restaurante ou tipo favorito de comida perto de você!</p>
+          <p id="error-message">Não mapeamos o que procura! :(<br> Que tal outras opções deliciosas?</p>
         </div>
       </div>
-      <!-- pics container -->
       <div class="row">
         <div class="col-sm-12">
-          <div class="h-100 justify-content-evenly" id="pics-wrapper">
+          <div class="h-100 justify-content-evenly bg-light" id="pics-wrapper">
           </div>
         </div>
       </div>
     </div>
-  <!-- termina div wrapper com todo o conteúdo -->
   </div>
     <script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5FLJhv_TZTrmtGe8KlJZXdRHULjrT6g&callback=initMap">
     </script>  

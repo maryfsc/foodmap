@@ -14,13 +14,14 @@ $(document).ready(function () {
       $('#modal-restname').html('<h3 class="text-center">' + restaurant.name + '</h3>');
       $('#modal-body').html('<img class="align-self-center" src=' + restaurant.image + ' height="150"><p class="mx-4">' + restaurant.description + '<p>');
     });
-  }); // termina arrow function primeiro forEach
+  });
 
   $('#filter-button').on('click', function () {
     $('#error-message').delay(1000).hide('slow');
     $('#message').delay(1000).show('slow');
 
     var userInput = $('#user-input').val();
+    $('#user-input').val('');
     var count = 0;
 
     restaurantes.forEach((restaurant, index) => {
@@ -29,8 +30,8 @@ $(document).ready(function () {
       } else {
         $('#rest' + index).delay(1000).show('slow');
         count += 1;
-      } // termina if
-    }) // termina arrow function segundo for each
+      }; 
+    }); 
 
     if (count === 0) {
       $('#error-message').delay(1000).show('slow');
@@ -40,14 +41,40 @@ $(document).ready(function () {
         $('#rest' + index).delay(1000).show('slow');  
       });
     };
-  }); // termina evento com button
-}); // termina jquery
+  });
+
+}); 
 
 var map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map-wrapper'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
+    zoom: 15,
+    center: new google.maps.LatLng(-23.5576413, -46.6644888),
+    mapTypeId: 'roadmap'
   });
-}
+
+  var restMarkers = restaurantes.map(function(rest){
+    return {
+      position: new google.maps.LatLng(rest.latitude, rest.longitude),
+      type: 'info'
+    }
+  });
+
+  restMarkers.forEach(function(rest) {
+    var marker = new google.maps.Marker({
+      position: rest.position,
+      map: map
+    });
+
+    // var infowindow = new google.maps.InfoWindow(), marker;
+    // google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    //   return function() {
+    //     infowindow.setContent(i.name);
+    //     infowindow.open(map, marker);
+    //   }
+    // });
+
+    // (marker))
+  });
+ }
