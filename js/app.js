@@ -8,7 +8,7 @@ $(document).ready(function () {
   $('#error-message').delay(1000).hide('slow');
 
   restaurantes.forEach((restaurant, index) => {
-    $('#pics-wrapper').append('<img data-toggle="modal" data-target="#only-modal" data-whatever=' + restaurant.name + ' src=' + restaurant.image + ' id="rest' + index + '" class=' + restaurant.type + '>');
+    $('#pics-wrapper').append('<img data-toggle="modal" data-target="#only-modal" src=' + restaurant.image + ' id="rest' + index + '" class=' + restaurant.type + '>');
     
     $('#rest' + index).on('click', function () {
       $('#modal-restname').html('<h3 class="text-center">' + restaurant.name + '</h3>');
