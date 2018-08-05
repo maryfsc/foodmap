@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   initMap();
 
-  $('#error-message').hide();
+  $('#error-message').delay(1000).hide('slow');
 
   restaurantes.forEach((restaurant, index) => {
     $('#pics-wrapper').append('<img data-toggle="modal" data-target="#only-modal" data-whatever=' + restaurant.name + ' src=' + restaurant.image + ' id="rest' + index + '" class=' + restaurant.type + '>');
@@ -17,26 +17,27 @@ $(document).ready(function () {
   }); // termina arrow function primeiro forEach
 
   $('#filter-button').on('click', function () {
-    $('#error-message').hide();
-    $('#message').show();
+    $('#error-message').delay(1000).hide('slow');
+    $('#message').delay(1000).show('slow');
+
     var userInput = $('#user-input').val();
     var count = 0;
 
     restaurantes.forEach((restaurant, index) => {
       if (userInput !== restaurant.name && userInput !== restaurant.type) {
-        $('#rest' + index).hide();
+        $('#rest' + index).delay(1000).hide('slow');
       } else {
-        $('#rest' + index).show();
+        $('#rest' + index).delay(1000).show('slow');
         count += 1;
       } // termina if
     }) // termina arrow function segundo for each
 
     if (count === 0) {
-      $('#error-message').show();
-      $('#message').hide();
+      $('#error-message').delay(1000).show('slow');
+      $('#message').delay(1000).hide('slow');
 
       restaurantes.forEach((restaurant, index) => {
-        $('#rest' + index).show();  
+        $('#rest' + index).delay(1000).show('slow');  
       });
     };
   }); // termina evento com button
