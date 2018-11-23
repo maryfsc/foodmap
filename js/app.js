@@ -8,11 +8,13 @@ $(document).ready(function () {
   $('#error-message').delay(1000).hide('slow');
 
   restaurantes.forEach((restaurant, index) => {
-    $('#pics-wrapper').append('<img data-toggle="modal" data-target="#only-modal" src=' + restaurant.image + ' id="rest' + index + '" class=' + restaurant.type + '>');
+    $('#pics-wrapper').append(`
+      <img data-toggle="modal" data-target="#only-modal" src=${restaurant.image} id="rest${index}" class=${restaurant.type}>
+      `);
     
     $('#rest' + index).on('click', function () {
-      $('#modal-restname').html('<h3 class="text-center">' + restaurant.name + '</h3>');
-      $('#modal-body').html('<img class="align-self-center" src=' + restaurant.image + ' height="150"><p class="mx-4">' + restaurant.description + '<p>');
+      $('#modal-restname').html(`<h3 class="text-center">${restaurant.name}</h3>`);
+      $('#modal-body').html(`<img class="align-self-center" src=${restaurant.image} height="150"><p class="mx-4">${restaurant.description}<p>`);
     });
   });
 
@@ -66,15 +68,5 @@ function initMap() {
       position: rest.position,
       map: map
     });
-
-    // var infowindow = new google.maps.InfoWindow(), marker;
-    // google.maps.event.addListener(marker, 'click', (function(marker, i) {
-    //   return function() {
-    //     infowindow.setContent(i.name);
-    //     infowindow.open(map, marker);
-    //   }
-    // });
-
-    // (marker))
   });
  }
