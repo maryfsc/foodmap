@@ -22,16 +22,17 @@ $(document).ready(function () {
     $('#error-message').delay(1000).hide('slow');
     $('#message').delay(1000).show('slow');
 
-    var userInput = $('#user-input').val();
+    var userInput = $('#user-input').val().toLowerCase();
+
     $('#user-input').val('');
     var count = 0;
 
     restaurantes.forEach((restaurant, index) => {
-      if (userInput !== restaurant.name && userInput !== restaurant.type) {
-        $('#rest' + index).delay(1000).hide('slow');
-      } else {
+      if (userInput.indexOf(restaurant.type) !== -1 || userInput.indexOf(restaurant.name.toLowerCase()) !== -1) {
         $('#rest' + index).delay(1000).show('slow');
-        count += 1;
+        count += 1; 
+      } else {
+        $('#rest' + index).delay(1000).hide('slow');
       }; 
     }); 
 
